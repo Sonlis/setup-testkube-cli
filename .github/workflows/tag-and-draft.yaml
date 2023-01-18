@@ -22,7 +22,7 @@ jobs:
           echo "##[set-output name=tags;]$(echo $(git tag))"
         id: extract-tags
       - name: Get latest tag
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         env:
           TAGS: ${{ steps.extract-tags.outputs.tags }}
           BRANCH: ${{ steps.extract-branch.outputs.branch }}
@@ -51,7 +51,7 @@ jobs:
           result-encoding: string
         id: get-latest-tag
       - name: Get new tag
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         env:
           PREV: ${{ steps.get-latest-tag.outputs.result }}
         with:
@@ -66,7 +66,7 @@ jobs:
           result-encoding: string
         id: get-new-tag
       - name: Get new major tag
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         env:
           PREV: ${{ steps.get-new-tag.outputs.result }}
         with:
