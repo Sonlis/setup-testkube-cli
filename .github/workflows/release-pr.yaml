@@ -55,7 +55,7 @@ jobs:
         run: |
           sed -i '/lib/d' ./.gitignore
       - name: Create branch
-        uses: peterjgrainger/action-create-branch@v2.0.1
+        uses: peterjgrainger/action-create-branch@v2.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
