@@ -61,7 +61,7 @@ jobs:
         with:
           branch: releases/${{ github.event.inputs.release }}
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           committer: Bastien Jeannelle <bastien.jeannelle@gmail.com>
           author: Bastien Jeannelle <bastien.jeannelle@gmail.com>
